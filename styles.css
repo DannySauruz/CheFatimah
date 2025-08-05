@@ -1,0 +1,1322 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+}
+
+nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    width: 100%;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap; /* Allow wrapping on small screens */
+}
+
+.nav-list li {
+    display: inline;
+}
+
+.nav-list a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    display: block; /* Better touch targets on mobile */
+    white-space: nowrap;
+}
+
+.nav-list a:hover {
+    background-color: #555;
+}
+
+.nav-list a.active {
+    background-color: #007bff;
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    min-height: calc(100vh - 80px);
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.welcome-section {
+    text-align: center;
+    margin-top: 5rem;
+    padding: 0 1rem;
+}
+
+.welcome-section h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 1rem;
+    word-wrap: break-word;
+}
+
+.welcome-section p {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.registration-btn {
+    display: inline-block;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 123, 255, 0.3);
+    min-width: 200px;
+    text-align: center;
+    touch-action: manipulation; /* Better touch response */
+}
+
+.registration-btn:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 123, 255, 0.4);
+}
+
+.registration-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 123, 255, 0.3);
+}
+
+/* Story Page Styles */
+.story-section {
+    padding: 2rem 0;
+}
+
+.story-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.story-section h1 {
+    font-size: 2.5rem;
+    color: #333;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-weight: 600;
+}
+
+.story-content {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.story-intro {
+    margin-bottom: 2.5rem;
+    text-align: center;
+}
+
+.story-intro h2 {
+    font-size: 1.5rem;
+    color: #007bff;
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+.story-intro p {
+    font-size: 1.1rem;
+    color: #666;
+    line-height: 1.7;
+}
+
+.story-chapter {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background: #f8f9fa;
+    border-radius: 8px;
+    border-left: 4px solid #007bff;
+}
+
+.story-chapter h3 {
+    font-size: 1.3rem;
+    color: #333;
+    margin-bottom: 0.8rem;
+    font-weight: 600;
+}
+
+.story-chapter p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+.story-cta {
+    text-align: center;
+    margin-top: 3rem;
+    padding: 2rem;
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    border-radius: 12px;
+    color: white;
+}
+
+.story-cta p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+}
+
+.story-cta .registration-btn {
+    background-color: white;
+    color: #007bff;
+    font-weight: 600;
+}
+
+.story-cta .registration-btn:hover {
+    background-color: #f8f9fa;
+    color: #0056b3;
+}
+
+/* Contact Section Styles */
+.contact-section {
+    padding: 4rem 0;
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+}
+
+.contact-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    text-align: center;
+}
+
+.contact-section h2 {
+    font-size: 2.2rem;
+    color: #333;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.contact-section p {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 3rem;
+    line-height: 1.6;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contact-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.contact-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.contact-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    text-decoration: none;
+}
+
+.contact-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.contact-icon svg {
+    width: 30px;
+    height: 30px;
+}
+
+.contact-info {
+    text-align: left;
+    flex-grow: 1;
+}
+
+.contact-info h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.contact-info p {
+    font-size: 0.9rem;
+    color: #666;
+    margin: 0;
+    line-height: 1.4;
+}
+
+/* WhatsApp styling */
+.contact-card.whatsapp .contact-icon {
+    background: #25D366;
+    color: white;
+}
+
+.contact-card.whatsapp:hover {
+    border-left: 4px solid #25D366;
+}
+
+.contact-card.whatsapp .contact-info h3 {
+    color: #25D366;
+}
+
+/* Facebook styling */
+.contact-card.facebook .contact-icon {
+    background: #1877F2;
+    color: white;
+}
+
+.contact-card.facebook:hover {
+    border-left: 4px solid #1877F2;
+}
+
+.contact-card.facebook .contact-info h3 {
+    color: #1877F2;
+}
+
+/* Email styling */
+.contact-card.email .contact-icon {
+    background: #EA4335;
+    color: white;
+}
+
+.contact-card.email:hover {
+    border-left: 4px solid #EA4335;
+}
+
+.contact-card.email .contact-info h3 {
+    color: #EA4335;
+}
+
+/* Footer Styles */
+.footer {
+    background: linear-gradient(135deg, #333, #2c2c2c);
+    color: white;
+    padding-top: 3rem;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.footer-section h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #007bff;
+}
+
+.footer-section p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: #ccc;
+    margin-bottom: 1rem;
+}
+
+.footer-social {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.footer-social a {
+    width: 40px;
+    height: 40px;
+    background: #007bff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.footer-social a:hover {
+    background: #0056b3;
+    transform: translateY(-2px);
+}
+
+.footer-social svg {
+    width: 20px;
+    height: 20px;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-links a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #007bff;
+}
+
+.footer-register-btn {
+    display: inline-block;
+    background: #007bff;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 500;
+    margin-top: 1rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-size: 0.9rem;
+}
+
+.footer-register-btn:hover {
+    background: #0056b3;
+    transform: translateY(-1px);
+    text-decoration: none;
+    color: white;
+}
+
+.footer-bottom {
+    border-top: 1px solid #444;
+    padding: 1.5rem 0;
+    text-align: center;
+}
+
+.footer-bottom-content p {
+    font-size: 0.8rem;
+    color: #999;
+    margin-bottom: 0.5rem;
+}
+
+.footer-bottom-content p:last-child {
+    margin-bottom: 0;
+}
+
+/* Products Page Styles */
+.products-section {
+    padding: 2rem 0;
+}
+
+.products-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.products-section h1 {
+    font-size: 2.5rem;
+    color: #333;
+    text-align: center;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.products-intro {
+    font-size: 1.2rem;
+    color: #666;
+    text-align: center;
+    margin-bottom: 3rem;
+    line-height: 1.6;
+}
+
+/* Category Selector Styles */
+.category-selector {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding: 2rem;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.category-selector label {
+    display: block;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.category-selector select {
+    width: 100%;
+    max-width: 400px;
+    padding: 1rem;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    border: 2px solid #007bff;
+    border-radius: 8px;
+    background-color: white;
+    color: #333;
+    cursor: pointer;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.category-selector select:hover {
+    border-color: #0056b3;
+    box-shadow: 0 2px 8px rgba(0, 123, 255, 0.2);
+}
+
+.category-selector select:focus {
+    outline: none;
+    border-color: #0056b3;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+}
+
+/* Category Message Styles */
+.category-message {
+    text-align: center;
+    padding: 3rem 2rem;
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+    border-radius: 12px;
+    margin-bottom: 2rem;
+}
+
+.category-message h2 {
+    font-size: 1.5rem;
+    color: #007bff;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.category-message p {
+    font-size: 1.1rem;
+    color: #666;
+    line-height: 1.6;
+}
+
+.product-category {
+    margin-bottom: 4rem;
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.product-category h2 {
+    font-size: 1.8rem;
+    color: #007bff;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    border-bottom: 3px solid #007bff;
+    padding-bottom: 0.5rem;
+}
+
+.category-description {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+    font-style: italic;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.product-card {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-left: 4px solid #007bff;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    overflow: hidden;
+}
+
+.product-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 123, 255, 0.15);
+}
+
+.product-card.featured {
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    color: white;
+    border-left: 4px solid white;
+}
+
+.product-card.featured h3 {
+    color: white;
+}
+
+.product-card.featured p {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* Product Image Styles */
+.product-image {
+    margin-bottom: 1rem;
+    border-radius: 6px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.product-image img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover .product-image img {
+    transform: scale(1.05);
+}
+
+.product-card.featured .product-image {
+    background: rgba(255, 255, 255, 0.9);
+}
+
+.product-card h3 {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 0.8rem;
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+.product-card p {
+    font-size: 0.9rem;
+    color: #555;
+    line-height: 1.5;
+}
+
+.products-cta {
+    text-align: center;
+    margin-top: 4rem;
+    padding: 3rem 2rem;
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    border-radius: 12px;
+    color: white;
+}
+
+.products-cta h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.products-cta p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+    line-height: 1.6;
+}
+
+.products-cta .registration-btn {
+    background-color: white;
+    color: #007bff;
+    font-weight: 600;
+    font-size: 1.1rem;
+    padding: 1rem 2.5rem;
+}
+
+.products-cta .registration-btn:hover {
+    background-color: #f8f9fa;
+    color: #0056b3;
+    transform: translateY(-2px);
+}
+
+/* Responsive Design for Products */
+@media (max-width: 768px) {
+    .products-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .products-section h1 {
+        font-size: 2rem;
+    }
+    
+    .product-category h2 {
+        font-size: 1.5rem;
+    }
+    
+    .products-container {
+        padding: 0 1rem;
+    }
+    
+    .product-category {
+        padding: 1.5rem;
+    }
+}
+
+/* Enhanced Responsive Design for All Pages */
+
+/* Large tablets and small desktops */
+@media (max-width: 1024px) {
+    nav {
+        padding: 0 1rem;
+    }
+    
+    main {
+        padding: 1.5rem;
+    }
+    
+    .welcome-section {
+        margin-top: 3rem;
+    }
+    
+    .story-container {
+        padding: 0 1rem;
+    }
+    
+    .products-container {
+        padding: 0 1rem;
+    }
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+    /* Navigation */
+    nav {
+        padding: 0 1rem;
+    }
+    
+    .nav-list {
+        gap: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .nav-list a {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.9rem;
+    }
+    
+    /* Main content */
+    main {
+        padding: 1rem;
+    }
+    
+    /* Welcome section */
+    .welcome-section {
+        margin-top: 2rem;
+        text-align: center;
+    }
+    
+    .welcome-section h1 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+    
+    .welcome-section h2 {
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+    }
+    
+    .welcome-section p {
+        font-size: 1rem;
+        margin-bottom: 2rem;
+    }
+    
+    .registration-btn {
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
+    }
+    
+    /* Story page */
+    .story-section h1 {
+        font-size: 2rem;
+    }
+    
+    .story-content {
+        padding: 1.5rem;
+    }
+    
+    .story-intro h2 {
+        font-size: 1.3rem;
+    }
+    
+    .story-chapter {
+        padding: 1rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .story-chapter h3 {
+        font-size: 1.1rem;
+    }
+    
+    .story-cta {
+        padding: 1.5rem;
+    }
+    
+    .story-cta p {
+        font-size: 1rem;
+    }
+}
+
+/* Mobile phones */
+@media (max-width: 480px) {
+    /* Header and navigation */
+    header {
+        padding: 0.8rem 0;
+    }
+    
+    nav {
+        padding: 0 0.5rem;
+    }
+    
+    .nav-list {
+        gap: 0.5rem;
+        padding: 0 0.5rem;
+    }
+    
+    .nav-list a {
+        padding: 0.3rem 0.6rem;
+        font-size: 0.8rem;
+        border-radius: 4px;
+    }
+    
+    /* Main content */
+    main {
+        padding: 0.5rem;
+    }
+    
+    /* Welcome section */
+    .welcome-section {
+        margin-top: 1.5rem;
+        padding: 1rem;
+    }
+    
+    .welcome-section h1 {
+        font-size: 1.8rem;
+        margin-bottom: 0.8rem;
+        line-height: 1.2;
+    }
+    
+    .welcome-section h2 {
+        font-size: 1rem;
+        margin-bottom: 0.8rem;
+        line-height: 1.4;
+    }
+    
+    .welcome-section p {
+        font-size: 0.9rem;
+        margin-bottom: 1.5rem;
+        text-align: left;
+    }
+    
+    .registration-btn {
+        padding: 0.7rem 1.2rem;
+        font-size: 0.9rem;
+        width: 100%;
+        max-width: 250px;
+        text-align: center;
+    }
+    
+    /* Story page mobile */
+    .story-section {
+        padding: 1rem 0;
+    }
+    
+    .story-container {
+        padding: 0 0.5rem;
+    }
+    
+    .story-section h1 {
+        font-size: 1.8rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .story-content {
+        padding: 1rem;
+        margin: 0 0.5rem;
+    }
+    
+    .story-intro {
+        margin-bottom: 2rem;
+    }
+    
+    .story-intro h2 {
+        font-size: 1.1rem;
+        margin-bottom: 0.8rem;
+    }
+    
+    .story-intro p {
+        font-size: 0.9rem;
+    }
+    
+    .story-chapter {
+        padding: 0.8rem;
+        margin-bottom: 1rem;
+    }
+    
+    .story-chapter h3 {
+        font-size: 1rem;
+        margin-bottom: 0.6rem;
+    }
+    
+    .story-chapter p {
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+    
+    .story-cta {
+        padding: 1.2rem 0.8rem;
+        margin-top: 2rem;
+    }
+    
+    .story-cta p {
+        font-size: 0.9rem;
+        margin-bottom: 1.2rem;
+    }
+    
+    .story-cta .registration-btn {
+        width: 100%;
+        max-width: none;
+    }
+    
+    /* Contact section tablet */
+    .contact-section {
+        padding: 3rem 0;
+    }
+    
+    .contact-container {
+        padding: 0 1rem;
+    }
+    
+    .contact-section h2 {
+        font-size: 1.8rem;
+    }
+    
+    .contact-section p {
+        font-size: 1rem;
+        margin-bottom: 2rem;
+    }
+    
+    .contact-options {
+        gap: 1.5rem;
+    }
+    
+    .contact-card {
+        padding: 1.5rem;
+        gap: 1rem;
+    }
+    
+    .contact-icon {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .contact-icon svg {
+        width: 25px;
+        height: 25px;
+    }
+    
+    .contact-info h3 {
+        font-size: 1.1rem;
+    }
+    
+    .contact-info p {
+        font-size: 0.85rem;
+    }
+    
+    /* Product image tablet styles */
+    .product-image img {
+        height: 180px;
+    }
+    
+    /* Products page mobile */
+    .products-section {
+        padding: 1rem 0;
+    }
+    
+    .products-container {
+        padding: 0 0.5rem;
+    }
+    
+    .products-section h1 {
+        font-size: 1.8rem;
+        margin-bottom: 0.8rem;
+    }
+    
+    .products-intro {
+        font-size: 1rem;
+        margin-bottom: 2rem;
+        padding: 0 0.5rem;
+    }
+    
+    /* Category selector mobile */
+    .category-selector {
+        margin-bottom: 2rem;
+        padding: 1.5rem 1rem;
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+    }
+    
+    .category-selector label {
+        font-size: 1rem;
+        margin-bottom: 0.8rem;
+    }
+    
+    .category-selector select {
+        font-size: 0.9rem;
+        padding: 0.8rem;
+    }
+    
+    /* Category message mobile */
+    .category-message {
+        padding: 2rem 1rem;
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .category-message h2 {
+        font-size: 1.2rem;
+        margin-bottom: 0.8rem;
+    }
+    
+    .category-message p {
+        font-size: 0.9rem;
+    }
+    
+    .product-category {
+        margin-bottom: 2.5rem;
+        padding: 1rem;
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+    }
+    
+    .product-category h2 {
+        font-size: 1.3rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .category-description {
+        font-size: 0.9rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .products-grid {
+        gap: 1rem;
+    }
+    
+    .product-card {
+        padding: 1rem;
+    }
+    
+    .product-card h3 {
+        font-size: 1rem;
+        margin-bottom: 0.6rem;
+        line-height: 1.2;
+    }
+    
+    .product-card p {
+        font-size: 0.8rem;
+        line-height: 1.4;
+    }
+    
+    /* Product image mobile styles */
+    .product-image {
+        margin-bottom: 0.8rem;
+    }
+    
+    .product-image img {
+        height: 150px;
+    }
+    
+    .products-cta {
+        margin-top: 2.5rem;
+        padding: 2rem 1rem;
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+    }
+    
+    .products-cta h2 {
+        font-size: 1.4rem;
+        margin-bottom: 0.8rem;
+    }
+    
+    .products-cta p {
+        font-size: 0.9rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    /* Category selector tablet */
+    .category-selector {
+        padding: 1.5rem;
+        margin-bottom: 2.5rem;
+    }
+    
+    .category-selector label {
+        font-size: 1.1rem;
+    }
+    
+    .category-selector select {
+        max-width: 350px;
+        font-size: 0.95rem;
+    }
+    
+    /* Category message tablet */
+    .category-message {
+        padding: 2.5rem 1.5rem;
+    }
+    
+    .category-message h2 {
+        font-size: 1.3rem;
+    }
+    
+    .category-message p {
+        font-size: 1rem;
+    }
+    
+    /* Footer tablet styles */
+    .footer {
+        padding-top: 2.5rem;
+    }
+    
+    .footer-container {
+        padding: 0 1rem;
+    }
+    
+    .footer-content {
+        gap: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .footer-section h3 {
+        font-size: 1.2rem;
+    }
+    
+    .footer-section p {
+        font-size: 0.85rem;
+    }
+    
+    .footer-links a {
+        font-size: 0.85rem;
+    }
+    
+    .footer-register-btn {
+        padding: 0.7rem 1.2rem;
+        font-size: 0.85rem;
+    }
+    
+    .products-cta .registration-btn {
+        width: 100%;
+        max-width: none;
+        padding: 0.8rem 1rem;
+        font-size: 0.9rem;
+    }
+    
+    /* Contact section mobile */
+    .contact-section {
+        padding: 2rem 0;
+    }
+    
+    .contact-container {
+        padding: 0 0.5rem;
+    }
+    
+    .contact-section h2 {
+        font-size: 1.5rem;
+        margin-bottom: 0.8rem;
+    }
+    
+    .contact-section p {
+        font-size: 0.9rem;
+        margin-bottom: 1.5rem;
+        padding: 0 0.5rem;
+    }
+    
+    .contact-options {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        margin-top: 1.5rem;
+    }
+    
+    .contact-card {
+        padding: 1.2rem;
+        gap: 1rem;
+        margin: 0 0.5rem;
+    }
+    
+    .contact-icon {
+        width: 45px;
+        height: 45px;
+    }
+    
+    .contact-icon svg {
+        width: 22px;
+        height: 22px;
+    }
+    
+    .contact-info h3 {
+        font-size: 1rem;
+        margin-bottom: 0.3rem;
+    }
+    
+    .contact-info p {
+        font-size: 0.8rem;
+        padding: 0;
+    }
+    
+    /* Footer mobile styles */
+    .footer {
+        padding-top: 2rem;
+    }
+    
+    .footer-container {
+        padding: 0 0.5rem;
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .footer-section {
+        text-align: center;
+    }
+    
+    .footer-section h3 {
+        font-size: 1.1rem;
+        margin-bottom: 0.8rem;
+    }
+    
+    .footer-section p {
+        font-size: 0.8rem;
+        margin-bottom: 0.8rem;
+    }
+    
+    .footer-social {
+        justify-content: center;
+        gap: 0.8rem;
+    }
+    
+    .footer-social a {
+        width: 35px;
+        height: 35px;
+    }
+    
+    .footer-social svg {
+        width: 18px;
+        height: 18px;
+    }
+    
+    .footer-links {
+        text-align: center;
+    }
+    
+    .footer-links a {
+        font-size: 0.8rem;
+    }
+    
+    .footer-register-btn {
+        padding: 0.6rem 1rem;
+        font-size: 0.8rem;
+        margin-top: 0.8rem;
+    }
+    
+    .footer-bottom {
+        padding: 1rem 0;
+    }
+    
+    .footer-bottom-content p {
+        font-size: 0.75rem;
+        margin-bottom: 0.3rem;
+    }
+}
+
+/* Very small screens */
+@media (max-width: 320px) {
+    .nav-list {
+        gap: 0.3rem;
+    }
+    
+    .nav-list a {
+        padding: 0.2rem 0.4rem;
+        font-size: 0.7rem;
+    }
+    
+    .welcome-section h1 {
+        font-size: 1.5rem;
+    }
+    
+    .story-section h1,
+    .products-section h1 {
+        font-size: 1.5rem;
+    }
+    
+    .product-category {
+        padding: 0.8rem;
+    }
+    
+    .story-content,
+    .products-cta {
+        padding: 0.8rem;
+    }
+}
